@@ -27,3 +27,16 @@ console.log(
     return max;
   }, 0)
 );
+
+
+/// Curried version of the 
+function curryAdd(a) {
+  return function(b) {
+    return function(c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(curryAdd(2)(3)(6));
+const total=curryAdd(2)(3)(6);
